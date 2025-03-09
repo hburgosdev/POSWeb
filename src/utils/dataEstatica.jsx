@@ -55,7 +55,7 @@ export const SecondarylinksArray = [
     label: "Configuración",
     icon:"flat-color-icons:settings",
     //icon:"icon-park:setting-two",
-    to: "/configurar",
+    to: "/settings",
     color:"#CE82FF"
   },
   
@@ -104,7 +104,7 @@ export const DataModulosConfiguracion =[
     title:"Categoria de productos",
     subtitle:"asigna categorias a tus productos",
     icono:"https://i.ibb.co/VYbMRLZ/categoria.png",
-    link:"/configurar/categorias",
+    link:"/settings/categories",
     
   },
   {

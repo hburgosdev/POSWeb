@@ -12,7 +12,6 @@ import { TbBrandSupabase } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { BsArrowDown, BsArrowUpShort } from "react-icons/bs";
 import { FaBalanceScale } from "react-icons/fa";
-//import logo from "../assets/ada369logo.png";
 import logo from "../assets/letter-j-512px.png";
 import { FcGoogle } from "react-icons/fc";
 
@@ -45,9 +44,12 @@ import { BsEmojiDizzy } from "react-icons/bs";
 import { FcImageFile } from "react-icons/fc";
 import { IoIosArrowBack } from "react-icons/io";
 import { GrAdd } from "react-icons/gr";
-
+import { FaSearch } from "react-icons/fa";
 
 export const v = {
+  colorPrincipal: `#FF417C`,
+  colorSecundario: `#CDED2D`,
+  iconobuscar:FaSearch,
   iconoagregar:GrAdd,
   iconoimagenvacia: FcImageFile,
   iconoemijivacio:BsEmojiDizzy,
@@ -88,7 +90,6 @@ export const v = {
   bpbart: `48em`,
   bpmarge: `62em`,
   bphomer: `75em`,
-  colorPrincipal: `#00F34A`,
   boxshadowGray: `0px 10px 15px -3px rgba(0,0,0,0.1)`,
   iconoFlechabajo: IoIosArrowDown,
   iconocorona: RiVipCrownFill,
@@ -115,7 +116,6 @@ export const v = {
   iconocalculadora: AiOutlineCalculator,
   iconocheck: BsCalendarCheck,
 
-  colorSecundario: `#DAC1FF`,
   iconoflechaderecha:IoIosArrowForward,
   iconoflechaizquierda:IoIosArrowBack,
   colorselector:"#BF94FF",

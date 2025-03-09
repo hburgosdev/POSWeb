@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  Btnsave,
+  Btn1,
   Footer,
   InputText,
   InputText2,
@@ -59,7 +59,7 @@ export function LoginTemplate() {
                 type="password"
               />
             </InputText> */}
-          <Btnsave
+          <Btn1
             titulo="INGRESAR"
             bgcolor="#0EA5F6"
             color="255,255,255"
@@ -69,7 +69,7 @@ export function LoginTemplate() {
         <Line>
           <span>0</span>
         </Line>
-        <Btnsave
+        <Btn1
           funcion={loginGoogle}
           titulo="Google"
           bgcolor="#fff"

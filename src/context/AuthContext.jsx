@@ -32,14 +32,11 @@ export const AuthContextProvider = ({ children }) => {
     } else {
       const responseCompany = await InsertCompanies({ id_auth: id_auth });
       //console.log("Insertar Compañia: ", responseCompany);
-
       const responseDocType = await ShowDocTypes({
         id_company: responseCompany?.id,
       });
       //console.log("Insertar Tipo de Documento: ", responseDocType);
-
       const responseRole = await ShowRolesName({ name: "superadministrator" });
-
       const pUser = {
         id_doc_type: responseDocType[0].id,
         id_role: responseRole?.id,
@@ -47,8 +44,7 @@ export const AuthContextProvider = ({ children }) => {
         reg_date: new Date(),
         id_auth: id_auth,
       };
-      console.log("Datos a insertar del usuario: ", pUser);
-
+      //console.log("Datos a insertar del usuario: ", pUser);
       await InsertSupAdmin(pUser);
     }
   };
