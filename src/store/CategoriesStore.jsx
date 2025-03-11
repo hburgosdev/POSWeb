@@ -15,6 +15,7 @@ export const useCategoriesStore = create((set, get) => ({
   dataCategories: [],
   categoriesItemSelect: [],
   parameters: {},
+
   showCategories: async (p) => {
     const response = await ShowCategories(p);
     set({ parameters: p });
@@ -22,27 +23,32 @@ export const useCategoriesStore = create((set, get) => ({
     set({ categoriesItemSelect: response[0] });
     return response;
   },
+
   selectCategories: (p) => {
     set({ categoriesItemSelect: p });
   },
+
   insertCategories: async (p, file) => {
     await InsertCategories(p, file);
     const { showCategories } = get();
     const { parameters } = get();
     set(showCategories(parameters));
   },
+
   deleteCategories: async (p) => {
     await DeleteCategories(p);
     const { showCategories } = get();
     const { parameters } = get();
     set(showCategories(parameters));
   },
+
   updateCategories: async (p, fileold, filenew) => {
     await UpdateCategories(p, fileold, filenew);
     const { showCategories } = get();
     const { parameters } = get();
     set(showCategories(parameters));
   },
+  
   searchCategories: async (p) => {
     const response = await SearchCategories(p);
     set({ dataCategories: response });

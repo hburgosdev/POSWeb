@@ -34,3 +34,14 @@ export async function ObtenerIdAuthSupabase() {
     return idauth;
   }
 }
+
+export async function ObtainIdAuthSupabase() {
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  if (session != null) {
+    const { user } = session;
+    const idauth = user.id;
+    return idauth;
+  }
+}

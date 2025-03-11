@@ -20,7 +20,7 @@ export async function InsertCategories(p, file) {
       icon: urlimage.publicUrl,
       id: new_id,
     };
-    await UpdateImages(peditimagen);
+    await UpImages(peditimagen);
   }
 }
 
@@ -48,7 +48,7 @@ async function InsertImages(idcategory, file) {
   }
 }
 
-async function UpdateImages(p) {
+async function UpImages(p) {
   const { error } = await supabase.from("categories").update(p).eq("id", p.id);
   if (error) {
     Swal.fire({
@@ -70,7 +70,7 @@ export async function ShowCategories(p) {
 }
 
 export async function SearchCategories(p) {
-  const { data } = supabase
+  const { data } = await supabase
     .from(table)
     .select()
     .eq("id_company", p.id_company)
@@ -95,7 +95,7 @@ export async function DeleteCategories(p) {
 }
 
 export async function UpdateCategories(p, fileold, filenew) {
-  const { error } = await supabase.rpc("updateCategories", p);
+  const { error } = await supabase.rpc("updatecategories", p);
   if (error) {
     Swal.fire({
       icon: "error",
